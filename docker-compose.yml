@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    tty: true
+    stdin_open: true
+    command: bash -c "while [ true ]; do sleep 10; done"
+    container_name: projetoarca
+    volumes:
+      - .:/projetoarca
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      - SPROCKETS_CACHE=/cache
+
+
+  db:
+    image: postgres
+    container_name: projetoarca-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
