@@ -1,27 +1,30 @@
+# frozen_string_literal: true
+
+# This controller is responsible for handle the requests coming from City's view
 class CitiesController < ApplicationController
-  before_action :set_city, only: [:show, :edit, :update, :destroy]
+  before_action :set_city, only: %i[show edit update destroy]
 
   # GET /cities
   # GET /cities.json
   def index
-    @cities=City.all
+    @cities = City.all
     @searchcity = params[:cidade]
     @searchstate = params[:estado]
-    
-    if @searchstate
-      #@cities=City.where("city_name ILIKE ?", "%#{searchcity}%").where("states.state_name ILIKE ?","%#{searchstate}%")
-      @cities=City.joins(:state).where("city_name ILIKE ?","%#{@searchcity}%").where("states.state_name ILIKE ?","%#{@searchstate}%")
-    else
-      @cities=City.where("city_name ILIKE ?", "%#{@searchcity}%")
-    end
-    
+
+    @cities = if @searchstate
+                City.joins(:state).where(
+                  'city_name ILIKE ?', "%#{@searchcity}%"
+                ).where(
+                  'states.state_name ILIKE ?', "%#{@searchstate}%"
+                )
+              else
+                City.where('city_name ILIKE ?', "%#{@searchcity}%")
+              end
   end
 
   # GET /cities/1
   # GET /cities/1.json
-  def show
-
-  end
+  def show; end
 
   # GET /cities/new
   def new
@@ -29,8 +32,7 @@ class CitiesController < ApplicationController
   end
 
   # GET /cities/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cities
   # POST /cities.json
@@ -73,13 +75,14 @@ class CitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_city
-      @city = City.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def city_params
-      params.require(:city).permit(:city_name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_city
+    @city = City.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def city_params
+    params.require(:city).permit(:city_name)
+  end
 end
