@@ -4,12 +4,23 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+    @cities=City.all
+    @searchcity = params[:cidade]
+    @searchstate = params[:estado]
+    
+    if @searchstate
+      #@cities=City.where("city_name ILIKE ?", "%#{searchcity}%").where("states.state_name ILIKE ?","%#{searchstate}%")
+      @cities=City.joins(:state).where("city_name ILIKE ?","%#{@searchcity}%").where("states.state_name ILIKE ?","%#{@searchstate}%")
+    else
+      @cities=City.where("city_name ILIKE ?", "%#{@searchcity}%")
+    end
+    
   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
+
   end
 
   # GET /cities/new

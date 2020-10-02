@@ -5,11 +5,13 @@ class StatesController < ApplicationController
   # GET /states.json
   def index
     @states = State.all
+
   end
 
   # GET /states/1
   # GET /states/1.json
   def show
+    @cities = @state.cities
   end
 
   # GET /states/new

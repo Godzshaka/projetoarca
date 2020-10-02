@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>City name:</strong>
+  <strong>Cidade:</strong>
   <%= @city.city_name %>
 </p>
-
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+<p>
+  <strong>Estado:</strong>
+  <%= @city.state.state_name %>
+</p>
+  
+<%= link_to 'Voltar', cities_path %>

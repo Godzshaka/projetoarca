@@ -1,9 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>State name:</strong>
+  <strong>Listando cidades do:</strong>
   <%= @state.state_name %>
 </p>
 
-<%= link_to 'Edit', edit_state_path(@state) %> |
-<%= link_to 'Back', states_path %>
+
+<p>
+  <strong>Cidades:</strong>
+  <%message = 'Nenhuma cidade cadastrada para mostrar'%>
+  <%if @cities.length()==0%>
+    <%= message %>
+  <% end %>
+  <% @cities.each do |city| %>
+    <p><%= city.city_name %></p>
+  <% end %>
+</p>
+
+<%= link_to 'Voltar', states_path %>
