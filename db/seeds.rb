@@ -8,32 +8,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-states = State.create([
-                        { state_name: 'Acre' },
-                        { state_name: 'Alagoas' },
-                        { state_name: 'Amapá' },
-                        { state_name: 'Amazonas' },
-                        { state_name: 'Bahia' },
-                        { state_name: 'Ceará' },
-                        { state_name: 'Distrito Federal' },
-                        { state_name: 'Espírito Santo' },
-                        { state_name: 'Goiás' },
-                        { state_name: 'Maranhão' },
-                        { state_name: 'Mato Grosso' },
-                        { state_name: 'Mato Grosso do Sul' },
-                        { state_name: 'Minas Gerais' },
-                        { state_name: 'Pará' },
-                        { state_name: 'Paraíba' },
-                        { state_name: 'Pernambuco' },
-                        { state_name: 'Piauí' },
-                        { state_name: 'Rio de Janeiro' },
-                        { state_name: 'Rio Grande do Norte' },
-                        { state_name: 'Rondônia' },
-                        { state_name: 'Roraima' },
-                        { state_name: 'São Paulo' },
-                        { state_name: 'Sergipe' },
-                        { state_name: 'Tocantins' }
-                      ])
+State.create([
+               { state_name: 'Acre' },
+               { state_name: 'Alagoas' },
+               { state_name: 'Amapá' },
+               { state_name: 'Amazonas' },
+               { state_name: 'Bahia' },
+               { state_name: 'Ceará' },
+               { state_name: 'Distrito Federal' },
+               { state_name: 'Espírito Santo' },
+               { state_name: 'Goiás' },
+               { state_name: 'Maranhão' },
+               { state_name: 'Mato Grosso' },
+               { state_name: 'Mato Grosso do Sul' },
+               { state_name: 'Minas Gerais' },
+               { state_name: 'Pará' },
+               { state_name: 'Paraíba' },
+               { state_name: 'Pernambuco' },
+               { state_name: 'Piauí' },
+               { state_name: 'Rio de Janeiro' },
+               { state_name: 'Rio Grande do Norte' },
+               { state_name: 'Rondônia' },
+               { state_name: 'Roraima' },
+               { state_name: 'São Paulo' },
+               { state_name: 'Sergipe' },
+               { state_name: 'Tocantins' }
+             ])
 
 pr = State.create({ state_name: 'Paraná' })
 

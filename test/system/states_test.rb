@@ -2,6 +2,7 @@
 
 require 'application_system_test_case'
 
+# StatesTest
 class StatesTest < ApplicationSystemTestCase
   setup do
     @state = states(:one)

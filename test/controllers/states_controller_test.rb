@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+# StatesControllerTest
 class StatesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @state = states(:one)

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This controller is responsible for handle the requests coming from State's view
 class StatesController < ApplicationController
   before_action :set_state, only: %i[show edit update destroy]
 

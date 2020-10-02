@@ -2,6 +2,7 @@
 
 require 'application_system_test_case'
 
+# Application_system_test
 class CitiesTest < ApplicationSystemTestCase
   setup do
     @city = cities(:one)

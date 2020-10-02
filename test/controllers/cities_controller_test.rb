@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+# CitiesControllerTest
 class CitiesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @city = cities(:one)
