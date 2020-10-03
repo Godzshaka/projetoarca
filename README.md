@@ -2,9 +2,9 @@
 
 The app's default data will be populated by db/Seeds.rb file
 
-The app's root directory was set to /cities and allows the search by State and/or City, showing the matching City(in case there is any) and the City's State.
+This app allows searching by State and/or City, showing the matching City (in case there is any) and the City's State.
 
-This project was developed using Docker, to build the container, run the command bellow:
+This project was developed using Docker, to build the app's container, run the command bellow:
 
 `docker-compose up`
 
@@ -17,4 +17,4 @@ Install gems:
 
 And finally you can setup the database running `rails db:setup`
 
-Then you can run `puma` on terminal and access the application on [Arca City Application](http://localhost:3000/ "Aplicacao Arca")
+Then you can run `puma` on terminal and access the application on `http://localhost:3000/`
