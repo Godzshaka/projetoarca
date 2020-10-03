@@ -17,4 +17,4 @@ Install gems:
 
 And finally you can setup the database running `rails db:setup`
 
-Then you can run `puma` on terminal and access the application on [http://localhost:3000/"Aplicacao Arca"]
+Then you can run `puma` on terminal and access the application on (http://localhost:3000/"Aplicacao Arca")
