@@ -15,6 +15,9 @@
 
 # Offense count: 3
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods.
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
 Metrics/MethodLength:
   Max: 30
 
